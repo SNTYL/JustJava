@@ -34,6 +34,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
+    //测试测试
     private String createOrderSummary() {
         String message = "Name:STL" + "\nQuantity:" + quantity + "\nTotal:" + (quantity * 5) + "\nThank you!";
         return message;

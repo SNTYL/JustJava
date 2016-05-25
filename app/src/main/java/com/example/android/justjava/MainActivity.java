@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 /**
@@ -47,11 +48,15 @@ public class MainActivity extends AppCompatActivity {
         CheckBox chocolateCheckBox = (CheckBox) findViewById(R.id.chocolate_checkbox);
         boolean hasChocolate = chocolateCheckBox.isChecked();
 
+        EditText nameEditText = (EditText) findViewById(R.id.name_text);
+        String name = nameEditText.getText().toString();
+
+
         // Calculate the price
         int price = calculatePrice();
 
         // Display the order summary on the screen
-        String message = createOrderSummary(price, hasWhippedCream, hasChocolate);
+        String message = createOrderSummary(name, price, hasWhippedCream, hasChocolate);
         displayMessage(message);
     }
 
@@ -72,8 +77,8 @@ public class MainActivity extends AppCompatActivity {
      * @param addChocolate    is whether or not to add chocolate to the coffee
      * @return text summary
      */
-    private String createOrderSummary(int price, boolean addWhippedCream, boolean addChocolate) {
-        String priceMessage = "Name: STL the Labyrinth";
+    private String createOrderSummary(String name, int price, boolean addWhippedCream, boolean addChocolate) {
+        String priceMessage = "Name:" + name ;
         priceMessage += "\nAdd whipped cream? " + addWhippedCream;
         priceMessage += "\nAdd chocolate? " + addChocolate;
         priceMessage += "\nQuantity: " + quantity;

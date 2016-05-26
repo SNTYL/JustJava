@@ -84,7 +84,7 @@
         android:paddingLeft="25dp"
         android:id="@+id/order_summary_text_view"
         android:paddingTop="8dp"
-        android:textSize="26sp"/>
+        android:textSize="18sp"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
